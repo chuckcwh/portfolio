@@ -1,0 +1,21 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+    <div align="center"><h1>Projects</h1></div>
+    <div class="catalog">
+        <ul>
+            <li>Project A</li>
+            <li>Project B</li>
+            <li>Project C</li>
+            <li>Project D</li>
+            <li>Project E</li>
+        </ul>
+    </div>
+    <div class="project_content">
+        {% for project in projects %}
+            <p>Project: {{ project.name }}</p>
+            <p>Project: {{ project.image }}</p>
+        {% endfor %}
+    </div>
+{#    {% include 'includes/hand.html' %}#}
+{% endblock content %}

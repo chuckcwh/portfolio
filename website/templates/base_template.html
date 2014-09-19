@@ -1,0 +1,46 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+{#        <script src="{% static 'js/cards.js' %}"></script>#}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    </head>
+
+    <body>
+
+        <div class="nav">
+{#            <img id="joker1" width="40px" src="{% static "img/red_joker.jpg" %}">#}
+
+            <div class="container">
+                <div id="pull-left">
+                    <a href="{% url 'home' %}">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="{% url 'about_me' %}">About Me</a>
+                </div>
+                <div id="pull-right">
+                    <a href="{% url 'projects' %}">Project</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="{% url 'comments' %}">Comment</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="{% url 'email' %}">Email</a>
+                </div>
+    {#            <img id="joker2" width="40px" src="{% static "img/black_joker.jpg" %}">#}
+            </div>
+        </div>
+        <br>
+        <hr>
+
+
+        <div class="main_part">
+
+
+        {% block content %}{% endblock content %}
+        </div>
+        <hr>
+        <div class="footer">
+            <p>Find me on:
+                <a href="https://www.facebook.com/chuck.hsu.9"><img height="30px" src="{% static "img/facebook.jpg" %}"/></a>
+                <a href="https://www.linkedin.com/pub/chia-wei-hsu/3b/536/968"><img height="30px" src="{% static "img/linkedin.jpg" %}"/></a>
+            </p>
+        </div>
+    </body>
+</html>

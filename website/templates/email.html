@@ -1,0 +1,13 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+    <div align="center"><h1>Contact</h1></div>
+{#    {% include 'includes/hand.html' %}#}
+    <b>Send email to Chia-Wei Hsu</b>
+    <form method="POST">
+        {% csrf_token %}
+{#        {{ author_form.errors }}#}
+        {{ email_form.as_p }}
+        <input type="submit" value="Submit email" />
+    </form>
+{% endblock content %}
